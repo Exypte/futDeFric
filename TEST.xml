@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<opx version="2.4">
+    <etudes>
+        <etude id="E2">
+            <client_id>CLIENT</client_id>
+            <ref_externes>
+                <id system="BIG">034459ed-d24c-4bb5-b536-7467bbf862a7</id>
+            </ref_externes>
+            <libelle>Dossier créé le 28/04/2021 à 12h50</libelle>
+            <date_creation>2021-04-28T12:50:15.000+02:00</date_creation>
+            <applications>
+                <big>
+                    <reference>OUI</reference>
+                    <donnees_complementaires>
+                        <donnee cle="VersionInterneDuModele">1.0</donnee>
+                    </donnees_complementaires>
+                </big>
+            </applications>
+            <commentaire></commentaire>
+            <date_maj>2021-04-28T12:50:44.000+02:00</date_maj>
+            <options_calcul>
+                <date_evaluation>2021-04-28</date_evaluation>
+                <date_fin_projection>2024-04-28</date_fin_projection>
+                <hypotheses_retraite>
+                    <SAM_avec_revenus_futurs>OUI</SAM_avec_revenus_futurs>
+                    <nb_decimales_arrondi>0</nb_decimales_arrondi>
+                    <modele_derive>NORMAL</modele_derive>
+                </hypotheses_retraite>
+                <hypotheses_succession>
+                    <abattement_residence_principale type="1ER_DECES"/>
+                    <deces ordre="1" personne_id="CLIENT">
+                        <forfait_mobilier>false</forfait_mobilier>
+                        <droit_option_conjoint>TOT_USU</droit_option_conjoint>
+                    </deces>
+                    <deces ordre="2" personne_id="CONJOINT">
+                        <forfait_mobilier>false</forfait_mobilier>
+                        <droit_option_conjoint>TOT_USU</droit_option_conjoint>
+                    </deces>
+                </hypotheses_succession>
+            </options_calcul>
+            <personnes>
+                <personne id="CLIENT">
+                    <personne_physique>
+                        <civilite code="M"/>
+                        <nom>TEST</nom>
+                        <prenom>TEST</prenom>
+                        <date_naissance>1970-01-01</date_naissance>
+                        <lieu_naissance pays="France" code_pays="FR"/>
+                        <profession libelle="Salarié cadre" csp="103" appl_csp="SALARIE_CADRE">
+                            <ref_externes>
+                                <id system="BIG">SALARIE_CADRE</id>
+                            </ref_externes>
+                        </profession>
+                        <invalidite code="NON"/>
+                        <decede>NON</decede>
+                        <situation_familiale>
+                            <situation_maritale code="M" regime_matrimonial="DEPUIS66"/>
+                        </situation_familiale>
+                        <ddv_consentie code="NON"/>
+                        <situation_fiscales>
+                            <situation_fiscale>
+                                <domiciliation type="METROPOLE"/>
+                            </situation_fiscale>
+                        </situation_fiscales>
+                        <profil/>
+                        <carriere penibilite="NON" taux_plein_anticipe="NON" age_retraite="67" option_depart="AGE">
+                            <indicateurs>
+                                <indicateur cle="TRANSFORMATION_SUPER_ARRCO" valeur="OUI"/>
+                            </indicateurs>
+                            <applications>
+                                <projection debut="62" fin="67"/>
+                            </applications>
+                        </carriere>
+                    </personne_physique>
+                    <qualite code="C"/>
+                    <ref_externes>
+                        <id system="BIG">0dcb01b7-7963-44ec-b4fd-3fde4dbb30b1</id>
+                    </ref_externes>
+                    <mode_contacts/>
+                </personne>
+                <personne id="CONJOINT">
+                    <personne_physique>
+                        <civilite code="MME"/>
+                        <nom>TEST</nom>
+                        <prenom>TEST</prenom>
+                        <date_naissance>1970-01-01</date_naissance>
+                        <lieu_naissance pays="France" code_pays="FR"/>
+                        <profession libelle="Salarié cadre" csp="103" appl_csp="SALARIE_CADRE">
+                            <ref_externes>
+                                <id system="BIG">SALARIE_CADRE</id>
+                            </ref_externes>
+                        </profession>
+                        <situation_familiale>
+                            <situation_maritale code="M" regime_matrimonial="DEPUIS66"/>
+                        </situation_familiale>
+                        <ddv_consentie code="NON"/>
+                        <profil/>
+                        <invalidite code="NON"/>
+                        <carriere penibilite="NON" taux_plein_anticipe="NON" age_retraite="67" option_depart="AGE">
+                            <indicateurs>
+                                <indicateur cle="TRANSFORMATION_SUPER_ARRCO" valeur="OUI"/>
+                            </indicateurs>
+                            <applications>
+                                <projection debut="62" fin="67"/>
+                            </applications>
+                        </carriere>
+                    </personne_physique>
+                    <ref_externes>
+                        <id system="BIG">ea38fd09-ab35-4407-a16f-b3af01126765</id>
+                    </ref_externes>
+                </personne>
+            </personnes>
+            <relations>
+                <relation id="R1" type="COUPLE">
+                    <personne_id role="EPOUX">CLIENT</personne_id>
+                    <personne_id role="EPOUX">CONJOINT</personne_id>
+                </relation>
+            </relations>
+            <succession>
+                <disposition personne_id="CLIENT">
+                    <ddv type="AUC"/>
+                </disposition>
+                <disposition personne_id="CONJOINT">
+                    <ddv type="AUC"/>
+                </disposition>
+            </succession>
+            <fluxs>
+                <flux id="F-10002" impact_budgetaire="OUI">
+                    <libelle>Solde d&#8217;impôt sur le revenu 2020 à payer en 2021 (Foyer)</libelle>
+                    <modeles>
+                        <modele_flux code="TAXE"/>
+                        <modele_famille_flux code="CHARGE_Calcul_IR" system="BIG"/>
+                    </modeles>
+                    <titulaires code="COUPLE">
+                        <personne_id>CLIENT</personne_id>
+                        <personne_id>CONJOINT</personne_id>
+                    </titulaires>
+                    <echeance>
+                        <debut code="DATE">2021-01-01</debut>
+                        <fin code="DATE">2021-12-31</fin>
+                        <periodicite code="A"/>
+                    </echeance>
+                    <valeur_fluxs>
+                        <valeur_flux date_valeur="2021-01-01" montant="0.00"/>
+                    </valeur_fluxs>
+                </flux>
+                <flux id="F-10003" impact_budgetaire="OUI">
+                    <libelle>Impôt sur la Fortune Immobilière</libelle>
+                    <modeles>
+                        <modele_flux code="TAXE"/>
+                        <modele_famille_flux code="CHARGE_Calcul_ISF" system="BIG"/>
+                    </modeles>
+                    <titulaires code="COUPLE">
+                        <personne_id>CLIENT</personne_id>
+                        <personne_id>CONJOINT</personne_id>
+                    </titulaires>
+                    <echeance>
+                        <debut code="DATE">2021-01-01</debut>
+                        <fin code="DATE">2021-05-31</fin>
+                        <periodicite code="A"/>
+                    </echeance>
+                    <valeur_fluxs>
+                        <valeur_flux date_valeur="2021-01-01" montant="0.00"/>
+                    </valeur_fluxs>
+                </flux>
+            </fluxs>
+            <mode_contacts/>
+            <indicateurs>
+                <indicateur cle="OBJECTIF_DE_PLACEMENT" valeur="0"/>
+                <indicateur cle="ACTIF" valeur="0"/>
+                <indicateur cle="PASSIF" valeur="0"/>
+                <indicateur cle="ACTIF_NET" valeur="0"/>
+                <indicateur cle="REVENUS" valeur="0"/>
+                <indicateur cle="CHARGES" valeur="0"/>
+                <indicateur cle="SOLDE_BUDGETAIRE" valeur="0"/>
+                <indicateur cle="FISCALITE" valeur="2021">
+                    <indicateur cle="PERSONNE_A_CHARGE" valeur="0"/>
+                    <indicateur cle="NOMBRE_PART" valeur="2.00"/>
+                    <indicateur cle="SALAIRES" valeur="0"/>
+                    <indicateur cle="PENSIONS" valeur="0"/>
+                    <indicateur cle="BIC" valeur="0"/>
+                    <indicateur cle="BNC" valeur="0"/>
+                    <indicateur cle="BA" valeur="0"/>
+                    <indicateur cle="RCM" valeur="0"/>
+                    <indicateur cle="REVENUS_FONCIERS" valeur="0"/>
+                    <indicateur cle="REVENUS_DECLARES" valeur="0"/>
+                    <indicateur cle="RBG" valeur="0"/>
+                    <indicateur cle="CHARGES_DEDUCTIBLES" valeur="0"/>
+                    <indicateur cle="REVENU_IMPOSABLE" valeur="0"/>
+                    <indicateur cle="IMPOT_BRUT" valeur="0"/>
+                    <indicateur cle="IMPUTATIONS" valeur="0"/>
+                    <indicateur cle="IR" valeur="0"/>
+                    <indicateur cle="TMI_IR" valeur="0.00%"/>
+                    <indicateur cle="TAUX_MOYEN" valeur="0.00%"/>
+                    <indicateur cle="PFL_ACQUITE" valeur="0"/>
+                    <indicateur cle="CONTRIBUTIONS_SOCIALES_A_LA_SOURCE" valeur="0"/>
+                    <indicateur cle="AUTRES_CONTRIBUTIONS_SOCIALES" valeur="0"/>
+                    <indicateur cle="CONTRIBUTIONS_SOCIALES" valeur="0"/>
+                    <indicateur cle="IR_PFL" valeur="0"/>
+                    <indicateur cle="ISF_IMMEUBLES_BATIS" valeur="0"/>
+                    <indicateur cle="ISF_IMMEUBLES_NON_BATIS" valeur="0"/>
+                    <indicateur cle="ISF_VALEURS_MOBILIERES" valeur="0"/>
+                    <indicateur cle="ISF_PASSIFS_DEDUCTIBLES" valeur="0"/>
+                    <indicateur cle="BASE_IMPOSABLE_ISF" valeur="0"/>
+                    <indicateur cle="ISF_REDUCTIONS" valeur="0"/>
+                    <indicateur cle="ISF" valeur="0"/>
+                    <indicateur cle="TMI_ISF" valeur="0.00%"/>
+                </indicateur>
+                <indicateur cle="IR" valeur="0"/>
+                <indicateur cle="TMI_IR" valeur="0.00%"/>
+                <indicateur cle="ISF" valeur="0"/>
+                <indicateur cle="TMI_ISF" valeur="0.00%"/>
+                <indicateur cle="CARRIERE" valeur="CLIENT">
+                    <indicateur cle="PROF_ACTUELLE" valeur="Salarié cadre"/>
+                    <indicateur cle="PERIODE_SAISIE" valeur="0"/>
+                    <indicateur cle="AGE_DEPART" valeur="67"/>
+                    <indicateur cle="DATE_DEPART" valeur="01/01/2037"/>
+                    <indicateur cle="DERNIER_REVENU" valeur="0"/>
+                    <indicateur cle="REGIMES_OBLIGATOIRES" valeur="0"/>
+                    <indicateur cle="REGIMES_DE_BASE" valeur="0"/>
+                    <indicateur cle="REGIMES_COMPLEMENTAIRES" valeur="0"/>
+                    <indicateur cle="AUTRES_RETRAITES" valeur="0"/>
+                    <indicateur cle="NET_DERNIER_REVENU" valeur="0"/>
+                    <indicateur cle="NET_REGIMES_OBLIGATOIRES" valeur="0"/>
+                    <indicateur cle="NET_REGIMES_DE_BASE" valeur="0"/>
+                    <indicateur cle="NET_REGIMES_COMPLEMENTAIRES" valeur="0"/>
+                    <indicateur cle="NET_AUTRES_RETRAITES" valeur="0"/>
+                    <indicateur cle="CAPITAL_IFC" valeur="0"/>
+                    <indicateur cle="REVERSION" valeur="0"/>
+                    <indicateur cle="NET_REVERSION" valeur="0"/>
+                    <indicateur cle="NET_REVENU_ACTUEL" valeur="0"/>
+                    <indicateur cle="REVENU_ACTUEL" valeur="0"/>
+                </indicateur>
+                <indicateur cle="PREVOYANCE" valeur="CLIENT">
+                    <indicateur cle="DATE_SURVENANCE_RISQUE" valeur="01/05/2021"/>
+                    <indicateur cle="CAPITAUX_DC" valeur="0"/>
+                    <indicateur cle="RENTE_CONJOINT" valeur="0"/>
+                    <indicateur cle="RENTE_EDUCATION" valeur="0"/>
+                    <indicateur cle="RENTE_INVALIDITE" valeur="0"/>
+                    <indicateur cle="GARANTIE_DC" valeur="CAPITAL_DECES">
+                        <indicateur cle="REGIMES_OBLIGATOIRES" valeur="0"/>
+                        <indicateur cle="CONTRATS_COLLECTIFS" valeur="0"/>
+                        <indicateur cle="CONTRATS_INDIVIDUELS" valeur="0"/>
+                        <indicateur cle="BESOIN" valeur="0"/>
+                        <indicateur cle="A_COUVRIR" valeur="0"/>
+                    </indicateur>
+                    <indicateur cle="GARANTIE_DC" valeur="REVENUS_DECES">
+                        <indicateur cle="TYPE_REVENU" valeur="PENSION_CONJOINT">
+                            <indicateur cle="REGIMES_OBLIGATOIRES" valeur="0"/>
+                            <indicateur cle="CONTRATS_COLLECTIFS" valeur="0"/>
+                            <indicateur cle="CONTRATS_INDIVIDUELS" valeur="0"/>
+                        </indicateur>
+                        <indicateur cle="TYPE_REVENU" valeur="RENTE_EDUCATION">
+                            <indicateur cle="REGIMES_OBLIGATOIRES" valeur="0"/>
+                            <indicateur cle="CONTRATS_COLLECTIFS" valeur="0"/>
+                            <indicateur cle="CONTRATS_INDIVIDUELS" valeur="0"/>
+                        </indicateur>
+                        <indicateur cle="BESOIN" valeur="0"/>
+                        <indicateur cle="A_COUVRIR" valeur="0"/>
+                    </indicateur>
+                    <indicateur cle="REVENU_PRO_JOURNALIER" valeur="0"/>
+                    <indicateur cle="PERIODE_INCAP" valeur="JOUR_1_JOUR_15">
+                        <indicateur cle="REGIMES_OBLIGATOIRES" valeur="0"/>
+                        <indicateur cle="CONTRATS_COLLECTIFS" valeur="0"/>
+                        <indicateur cle="CONTRATS_INDIVIDUELS" valeur="0"/>
+                        <indicateur cle="BESOIN" valeur="0"/>
+                        <indicateur cle="A_COUVRIR" valeur="0"/>
+                    </indicateur>
+                    <indicateur cle="PERIODE_INCAP" valeur="JOUR_16_JOUR_90">
+                        <indicateur cle="REGIMES_OBLIGATOIRES" valeur="0"/>
+                        <indicateur cle="CONTRATS_COLLECTIFS" valeur="0"/>
+                        <indicateur cle="CONTRATS_INDIVIDUELS" valeur="0"/>
+                        <indicateur cle="BESOIN" valeur="0"/>
+                        <indicateur cle="A_COUVRIR" valeur="0"/>
+                    </indicateur>
+                    <indicateur cle="PERIODE_INCAP" valeur="JOUR_90_AN_1">
+                        <indicateur cle="REGIMES_OBLIGATOIRES" valeur="0"/>
+                        <indicateur cle="CONTRATS_COLLECTIFS" valeur="0"/>
+                        <indicateur cle="CONTRATS_INDIVIDUELS" valeur="0"/>
+                        <indicateur cle="BESOIN" valeur="0"/>
+                        <indicateur cle="A_COUVRIR" valeur="0"/>
+                    </indicateur>
+                    <indicateur cle="PERIODE_INCAP" valeur="AN_1_AN_3">
+                        <indicateur cle="REGIMES_OBLIGATOIRES" valeur="0"/>
+                        <indicateur cle="CONTRATS_COLLECTIFS" valeur="0"/>
+                        <indicateur cle="CONTRATS_INDIVIDUELS" valeur="0"/>
+                        <indicateur cle="BESOIN" valeur="0"/>
+                        <indicateur cle="A_COUVRIR" valeur="0"/>
+                    </indicateur>
+                    <indicateur cle="REVENU_PRO_ANNUELS" valeur="0"/>
+                    <indicateur cle="CATEGORIE_INVALIDITE" valeur="CATEGORIE_1">
+                        <indicateur cle="REGIMES_OBLIGATOIRES" valeur="0"/>
+                        <indicateur cle="CONTRATS_COLLECTIFS" valeur="0"/>
+                        <indicateur cle="CONTRATS_INDIVIDUELS" valeur="0"/>
+                        <indicateur cle="BESOIN" valeur="0"/>
+                        <indicateur cle="A_COUVRIR" valeur="0"/>
+                    </indicateur>
+                    <indicateur cle="CATEGORIE_INVALIDITE" valeur="CATEGORIE_2">
+                        <indicateur cle="REGIMES_OBLIGATOIRES" valeur="0"/>
+                        <indicateur cle="CONTRATS_COLLECTIFS" valeur="0"/>
+                        <indicateur cle="CONTRATS_INDIVIDUELS" valeur="0"/>
+                        <indicateur cle="BESOIN" valeur="0"/>
+                        <indicateur cle="A_COUVRIR" valeur="0"/>
+                    </indicateur>
+                    <indicateur cle="CATEGORIE_INVALIDITE" valeur="CATEGORIE_3">
+                        <indicateur cle="REGIMES_OBLIGATOIRES" valeur="0"/>
+                        <indicateur cle="CONTRATS_COLLECTIFS" valeur="0"/>
+                        <indicateur cle="CONTRATS_INDIVIDUELS" valeur="0"/>
+                        <indicateur cle="BESOIN" valeur="0"/>
+                        <indicateur cle="A_COUVRIR" valeur="0"/>
+                    </indicateur>
+                </indicateur>
+                <indicateur cle="CARRIERE" valeur="CONJOINT">
+                    <indicateur cle="PROF_ACTUELLE" valeur="Salarié cadre"/>
+                    <indicateur cle="PERIODE_SAISIE" valeur="0"/>
+                    <indicateur cle="AGE_DEPART" valeur="67"/>
+                    <indicateur cle="DATE_DEPART" valeur="01/01/2037"/>
+                    <indicateur cle="DERNIER_REVENU" valeur="0"/>
+                    <indicateur cle="REGIMES_OBLIGATOIRES" valeur="0"/>
+                    <indicateur cle="REGIMES_DE_BASE" valeur="0"/>
+                    <indicateur cle="REGIMES_COMPLEMENTAIRES" valeur="0"/>
+                    <indicateur cle="AUTRES_RETRAITES" valeur="0"/>
+                    <indicateur cle="NET_DERNIER_REVENU" valeur="0"/>
+                    <indicateur cle="NET_REGIMES_OBLIGATOIRES" valeur="0"/>
+                    <indicateur cle="NET_REGIMES_DE_BASE" valeur="0"/>
+                    <indicateur cle="NET_REGIMES_COMPLEMENTAIRES" valeur="0"/>
+                    <indicateur cle="NET_AUTRES_RETRAITES" valeur="0"/>
+                    <indicateur cle="CAPITAL_IFC" valeur="0"/>
+                    <indicateur cle="REVERSION" valeur="0"/>
+                    <indicateur cle="NET_REVERSION" valeur="0"/>
+                    <indicateur cle="NET_REVENU_ACTUEL" valeur="0"/>
+                    <indicateur cle="REVENU_ACTUEL" valeur="0"/>
+                </indicateur>
+                <indicateur cle="PREVOYANCE" valeur="CONJOINT">
+                    <indicateur cle="DATE_SURVENANCE_RISQUE" valeur="01/05/2021"/>
+                    <indicateur cle="CAPITAUX_DC" valeur="0"/>
+                    <indicateur cle="RENTE_CONJOINT" valeur="0"/>
+                    <indicateur cle="RENTE_EDUCATION" valeur="0"/>
+                    <indicateur cle="RENTE_INVALIDITE" valeur="0"/>
+                    <indicateur cle="GARANTIE_DC" valeur="CAPITAL_DECES">
+                        <indicateur cle="REGIMES_OBLIGATOIRES" valeur="0"/>
+                        <indicateur cle="CONTRATS_COLLECTIFS" valeur="0"/>
+                        <indicateur cle="CONTRATS_INDIVIDUELS" valeur="0"/>
+                        <indicateur cle="BESOIN" valeur="0"/>
+                        <indicateur cle="A_COUVRIR" valeur="0"/>
+                    </indicateur>
+                    <indicateur cle="GARANTIE_DC" valeur="REVENUS_DECES">
+                        <indicateur cle="TYPE_REVENU" valeur="PENSION_CONJOINT">
+                            <indicateur cle="REGIMES_OBLIGATOIRES" valeur="0"/>
+                            <indicateur cle="CONTRATS_COLLECTIFS" valeur="0"/>
+                            <indicateur cle="CONTRATS_INDIVIDUELS" valeur="0"/>
+                        </indicateur>
+                        <indicateur cle="TYPE_REVENU" valeur="RENTE_EDUCATION">
+                            <indicateur cle="REGIMES_OBLIGATOIRES" valeur="0"/>
+                            <indicateur cle="CONTRATS_COLLECTIFS" valeur="0"/>
+                            <indicateur cle="CONTRATS_INDIVIDUELS" valeur="0"/>
+                        </indicateur>
+                        <indicateur cle="BESOIN" valeur="0"/>
+                        <indicateur cle="A_COUVRIR" valeur="0"/>
+                    </indicateur>
+                    <indicateur cle="REVENU_PRO_JOURNALIER" valeur="0"/>
+                    <indicateur cle="PERIODE_INCAP" valeur="JOUR_1_JOUR_15">
+                        <indicateur cle="REGIMES_OBLIGATOIRES" valeur="0"/>
+                        <indicateur cle="CONTRATS_COLLECTIFS" valeur="0"/>
+                        <indicateur cle="CONTRATS_INDIVIDUELS" valeur="0"/>
+                        <indicateur cle="BESOIN" valeur="0"/>
+                        <indicateur cle="A_COUVRIR" valeur="0"/>
+                    </indicateur>
+                    <indicateur cle="PERIODE_INCAP" valeur="JOUR_16_JOUR_90">
+                        <indicateur cle="REGIMES_OBLIGATOIRES" valeur="0"/>
+                        <indicateur cle="CONTRATS_COLLECTIFS" valeur="0"/>
+                        <indicateur cle="CONTRATS_INDIVIDUELS" valeur="0"/>
+                        <indicateur cle="BESOIN" valeur="0"/>
+                        <indicateur cle="A_COUVRIR" valeur="0"/>
+                    </indicateur>
+                    <indicateur cle="PERIODE_INCAP" valeur="JOUR_90_AN_1">
+                        <indicateur cle="REGIMES_OBLIGATOIRES" valeur="0"/>
+                        <indicateur cle="CONTRATS_COLLECTIFS" valeur="0"/>
+                        <indicateur cle="CONTRATS_INDIVIDUELS" valeur="0"/>
+                        <indicateur cle="BESOIN" valeur="0"/>
+                        <indicateur cle="A_COUVRIR" valeur="0"/>
+                    </indicateur>
+                    <indicateur cle="PERIODE_INCAP" valeur="AN_1_AN_3">
+                        <indicateur cle="REGIMES_OBLIGATOIRES" valeur="0"/>
+                        <indicateur cle="CONTRATS_COLLECTIFS" valeur="0"/>
+                        <indicateur cle="CONTRATS_INDIVIDUELS" valeur="0"/>
+                        <indicateur cle="BESOIN" valeur="0"/>
+                        <indicateur cle="A_COUVRIR" valeur="0"/>
+                    </indicateur>
+                    <indicateur cle="REVENU_PRO_ANNUELS" valeur="0"/>
+                    <indicateur cle="CATEGORIE_INVALIDITE" valeur="CATEGORIE_1">
+                        <indicateur cle="REGIMES_OBLIGATOIRES" valeur="0"/>
+                        <indicateur cle="CONTRATS_COLLECTIFS" valeur="0"/>
+                        <indicateur cle="CONTRATS_INDIVIDUELS" valeur="0"/>
+                        <indicateur cle="BESOIN" valeur="0"/>
+                        <indicateur cle="A_COUVRIR" valeur="0"/>
+                    </indicateur>
+                    <indicateur cle="CATEGORIE_INVALIDITE" valeur="CATEGORIE_2">
+                        <indicateur cle="REGIMES_OBLIGATOIRES" valeur="0"/>
+                        <indicateur cle="CONTRATS_COLLECTIFS" valeur="0"/>
+                        <indicateur cle="CONTRATS_INDIVIDUELS" valeur="0"/>
+                        <indicateur cle="BESOIN" valeur="0"/>
+                        <indicateur cle="A_COUVRIR" valeur="0"/>
+                    </indicateur>
+                    <indicateur cle="CATEGORIE_INVALIDITE" valeur="CATEGORIE_3">
+                        <indicateur cle="REGIMES_OBLIGATOIRES" valeur="0"/>
+                        <indicateur cle="CONTRATS_COLLECTIFS" valeur="0"/>
+                        <indicateur cle="CONTRATS_INDIVIDUELS" valeur="0"/>
+                        <indicateur cle="BESOIN" valeur="0"/>
+                        <indicateur cle="A_COUVRIR" valeur="0"/>
+                    </indicateur>
+                </indicateur>
+                <indicateur cle="SUCCESSION" valeur="DECES1">
+                    <indicateur cle="DATE_DC_PRESUME" valeur="28/04/2021"/>
+                    <indicateur cle="MASSE_SUCCESSORALE" valeur="0"/>
+                    <indicateur cle="DROITS_SUCCESSION" valeur="0"/>
+                    <indicateur cle="CAPITAUX_DECES_NETS" valeur="0"/>
+                    <indicateur cle="COUVERTURE" valeur="0"/>
+                    <indicateur cle="PERSONNE_ID_DECEDE" valeur="CLIENT"/>
+                    <indicateur cle="PERSONNE_ID_HERITIER" valeur="CONJOINT">
+                        <indicateur cle="HERITAGE_VALEUR_CIVILE" valeur="0"/>
+                        <indicateur cle="HERITAGE_VALEUR_FISCALE" valeur="0"/>
+                        <indicateur cle="DROITS_SUCCESSION" valeur="0"/>
+                        <indicateur cle="CAPITAUX_DECES_NETS" valeur="0"/>
+                    </indicateur>
+                </indicateur>
+                <indicateur cle="SUCCESSION" valeur="DECES2">
+                    <indicateur cle="DATE_DC_PRESUME" valeur="28/04/2021"/>
+                    <indicateur cle="MASSE_SUCCESSORALE" valeur="0"/>
+                    <indicateur cle="DROITS_SUCCESSION" valeur="0"/>
+                    <indicateur cle="CAPITAUX_DECES_NETS" valeur="0"/>
+                    <indicateur cle="COUVERTURE" valeur="0"/>
+                    <indicateur cle="PERSONNE_ID_DECEDE" valeur="CONJOINT"/>
+                </indicateur>
+                <indicateur cle="SUCCESSION" valeur="ORDRE_INVERSE_DC1">
+                    <indicateur cle="DATE_DC_PRESUME" valeur="28/04/2021"/>
+                    <indicateur cle="MASSE_SUCCESSORALE" valeur="0"/>
+                    <indicateur cle="DROITS_SUCCESSION" valeur="0"/>
+                    <indicateur cle="CAPITAUX_DECES_NETS" valeur="0"/>
+                    <indicateur cle="COUVERTURE" valeur="0"/>
+                    <indicateur cle="PERSONNE_ID_DECEDE" valeur="CONJOINT"/>
+                    <indicateur cle="PERSONNE_ID_HERITIER" valeur="CLIENT">
+                        <indicateur cle="HERITAGE_VALEUR_CIVILE" valeur="0"/>
+                        <indicateur cle="HERITAGE_VALEUR_FISCALE" valeur="0"/>
+                        <indicateur cle="DROITS_SUCCESSION" valeur="0"/>
+                        <indicateur cle="CAPITAUX_DECES_NETS" valeur="0"/>
+                    </indicateur>
+                </indicateur>
+                <indicateur cle="SUCCESSION" valeur="ORDRE_INVERSE_DC2">
+                    <indicateur cle="DATE_DC_PRESUME" valeur="28/04/2021"/>
+                    <indicateur cle="MASSE_SUCCESSORALE" valeur="0"/>
+                    <indicateur cle="DROITS_SUCCESSION" valeur="0"/>
+                    <indicateur cle="CAPITAUX_DECES_NETS" valeur="0"/>
+                    <indicateur cle="COUVERTURE" valeur="0"/>
+                    <indicateur cle="PERSONNE_ID_DECEDE" valeur="CLIENT"/>
+                </indicateur>
+            </indicateurs>
+        </etude>
+    </etudes>
+</opx>

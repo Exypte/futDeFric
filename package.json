@@ -1,0 +1,14 @@
+{
+  "name": "electron-app",
+  "version": "1.0.0",
+  "description": "Romain aime le fric",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^13.0.0"
+  }
+}
